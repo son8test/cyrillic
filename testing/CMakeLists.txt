@@ -4,6 +4,10 @@ set( CMAKE_CXX_EXTENSIONS OFF )
 
 link_libraries( son8::cyrillic )
 
+if ( MSVC )
+    add_compile_options( /permissive- )
+endif( )
+
 # Add tests ⮟ HERE ⮟ that should NOT use extra warning flags
 
 if ( MSVC )
