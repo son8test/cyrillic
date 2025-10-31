@@ -21,3 +21,6 @@ add_executable( test-encoded-error-none encoded/error/none.cxx )
 add_test( NAME test-encoded-error-none COMMAND test-encoded-error-none )
 add_executable( test-decoded-error-none decoded/error/none.cxx )
 add_test( NAME test-decoded-error-none COMMAND test-decoded-error-none )
+add_executable( test-dencoded-error-none dencoded/error/none.cxx )
+add_test( NAME test-dencoded-error-none COMMAND test-dencoded-error-none )
+
