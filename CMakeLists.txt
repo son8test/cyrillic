@@ -4,7 +4,7 @@ project( son8test VERSION 0.0.0 LANGUAGES CXX )
 set( SON8PROJ son8__${PROJECT_NAME} )
 
 set( testrepo cyrillic )
-set( testhash 508a39913be6a547dfc5f589de5d7800e688f034 )
+set( testhash 10d31693315d869d1ddee4c466abf30995116a9e )
 
 include( FetchContent )
 
