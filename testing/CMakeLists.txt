@@ -13,8 +13,17 @@ else( )
 endif( )
 
 # Add tests ⮟ HERE ⮟ that SHOULD use extra warning flags
+
+# exception
 add_executable( testing-encoded-exception-language encoded/exception/language.cxx )
 add_test( NAME test-encoded-exception-language COMMAND testing-encoded-exception-language )
+add_executable( testing-decoded-exception-language decoded/exception/language.cxx )
+add_test( NAME test-decoded-exception-language COMMAND testing-decoded-exception-language )
+add_executable( testing-encoded-exception-none encoded/exception/none.cxx )
+add_test( NAME test-encoded-exception-none COMMAND testing-encoded-exception-none )
+add_executable( testing-decoded-exception-none decoded/exception/none.cxx )
+add_test( NAME test-decoded-exception-none COMMAND testing-decoded-exception-none )
+# error
 add_executable( testing-encoded-error-language encoded/error/language.cxx )
 add_test( NAME test-encoded-error-language COMMAND testing-encoded-error-language )
 add_executable( testing-decoded-error-language decoded/error/language.cxx )
@@ -23,6 +32,7 @@ add_executable( testing-encoded-error-none encoded/error/none.cxx )
 add_test( NAME test-encoded-error-none COMMAND testing-encoded-error-none )
 add_executable( testing-decoded-error-none decoded/error/none.cxx )
 add_test( NAME test-decoded-error-none COMMAND testing-decoded-error-none )
+# dencoded
 add_executable( testing-dencoded-error-none dencoded/error/none.cxx )
 add_test( NAME test-dencoded-error-none COMMAND testing-dencoded-error-none )
 
