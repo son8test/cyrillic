@@ -1,10 +1,10 @@
-#include <son8/cyrillic/encoded.hxx>
-#include <son8/cyrillic/exception.hxx>
+#include <son8/cyrillic/alias.hxx>
+#include <son8/cyrillic/error.hxx>
+#include <son8/cyrillic/encode/return.hxx>
 
 using namespace son8::cyrillic;
 
-int main( ) try {
-    Encoded test{ u"test" };
-} catch ( Exception const &e ) {
-    if ( e.code( ) != Error::Language ) return 8;
+int main( ) {
+    StringByte out;
+    return not ( Error::Language == encode( out, u"тест" ) );
 }

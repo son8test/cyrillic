@@ -1,4 +1,4 @@
-.PHONY: usage cmake build ctest clean
+.PHONY: usage cmake build ctest clean allin build tests
 
 usage:
 	cat Makefile.usage.txt
@@ -6,7 +6,7 @@ usage:
 cmake:
 	cd build && cmake -GNinja -DCMAKE_EXPORT_COMPILE_COMMANDS=ON .. && cd ../
 
-build:
+ninja:
 	cd build && ninja && cd ../
 
 ctest:
@@ -14,3 +14,12 @@ ctest:
 
 clean:
 	rm -rf build/ && git restore build/.gitignore
+
+allin:
+	make clean && make cmake && make build && make ctest && make usage
+
+build:
+	make cmake && make ninja
+
+tests:
+	make ninja && make ctest
