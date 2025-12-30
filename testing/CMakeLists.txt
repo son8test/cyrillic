@@ -41,4 +41,6 @@ add_test( NAME test-encoded-error-invalid_word COMMAND testing-encoded-error-inv
 # dencoded
 add_executable( testing-dencoded-error-none dencoded/error/none.cxx )
 add_test( NAME test-dencoded-error-none COMMAND testing-dencoded-error-none )
-
+# filehack
+add_executable( test-filehack filehack.cxx )
+add_test( NAME test-filehack COMMAND test-filehack )
