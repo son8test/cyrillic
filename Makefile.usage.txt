@@ -1,4 +1,4 @@
-usage:
+
     usage: print this (defaults on empty) directive
     cmake: configures project using ninja generator
     ninja: synthesize project using ninja generator
@@ -7,3 +7,4 @@ usage:
     allin: (clean->cmake->ninja->ctest)
     build: (cmake->ninja)
     tests: (ninja->ctest)
+
